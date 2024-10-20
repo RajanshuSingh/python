@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Attendance Management System</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Management System</h1>
+        <form action="{{ url_for('submit') }}" method="post">
+            <input type="text" name="student-name" placeholder="Student Name" required>
+            <input type="text" name="roll-number" placeholder="Roll Number" required>
+            <input type="date" name="date" required>
+            <select name="class-type" required>
+                <option value="theory">Theory</option>
+                <option value="practical">Practical</option>
+            </select>
+            <input type="text" name="subject-name" placeholder="Subject Name" required>
+            <select name="attendance-status" required>
+                <option value="present">Present</option>
+                <option value="absent">Absent</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

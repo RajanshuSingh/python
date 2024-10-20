@@ -1,0 +1,103 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px; /* Add margin to separate buttons */
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode .container {
+    background: #444;
+}
+
+body.dark-mode button {
+    background: #555;
+}
+
+body.dark-mode button:hover {
+    background: #777;
+}
+
+/* Centering the toggle button */
+.switch {
+    display: flex;
+    justify-content: center; /* Center the toggle button */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.switch input {
+    display: none; /* Hide default HTML checkbox */
+}
+
+.slider {
+    position: relative;
+    cursor: pointer;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2de479;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
